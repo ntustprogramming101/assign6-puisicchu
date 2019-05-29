@@ -1,5 +1,24 @@
-class Clock {
-	// Requirement #2: Complete Clock Class
+class Clock extends Item{
+	Clock(float x, float y){
+   super(x,y);
+}
+  
+void display(){
+  for(int i = 0; i < items.length; i++){
+image(clock, x, y);
+  }
+}
+
+void checkCollision(Player player){
+  if(player.health < player.PLAYER_MAX_HEALTH
+      && isHit(x, y, SOIL_SIZE, SOIL_SIZE, player.x, player.y, player.w, player.h)){
+addTime(15f);
+        player.health ++;
+        x = y = -1000;
+      }
+}
+  }
+  // Requirement #2: Complete Clock Class
 
 	/*
 	Code for Reference:
@@ -19,4 +38,3 @@ class Clock {
 
 		}
 	*/
-}
