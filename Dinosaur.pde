@@ -57,5 +57,3 @@ class Dinosaur extends Enemy{
 		currentSpeed *= TRIGGERED_SPEED_MULTIPLIER
 	}
 	*/
-}
-}
